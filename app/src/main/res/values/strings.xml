@@ -4,4 +4,8 @@
     <string name="password">Contraseña</string>
     <string name="login">Iniciar sesion</string>
     <string name="invalidCredentials">Correo o contraseña incorrecta</string>
+    <string name="heroes">Heroes</string>
+    <string name="bienvenido">"Bienvenido"</string>
+    <string name="villians">Villanos</string>
+    <string name="anti_heroes">Anti-Heroes</string>
 </resources>
