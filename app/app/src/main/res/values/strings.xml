@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">HeroesActivity</string>
+    <string name="email">Correo Electronico</string>
+    <string name="password">Contraseña</string>
+    <string name="login">Iniciar sesion</string>
+    <string name="invalidCredentials">Correo o contraseña incorrecta</string>
+</resources>
