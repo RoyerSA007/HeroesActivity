@@ -8,12 +8,6 @@
     tools:context=".MainActivity"
     android:padding="15dp"
     >
-<!--    -->
-<!--ctrl+k ctrl+c
-    Amclaje de elementos, top_totopof etc
-    Separacion bias
--->
-<!--    -->
 
     <ImageView
         android:id="@+id/imglogin"
