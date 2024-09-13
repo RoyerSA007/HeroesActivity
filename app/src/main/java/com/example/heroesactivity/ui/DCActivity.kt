@@ -23,7 +23,10 @@ class DCActivity : AppCompatActivity() {
         setContentView(R.layout.activity_dcactivity)
 
         herosRecyclerView = findViewById(R.id.heroesRecyclerView)
-        herosRecyclerView.adapter = HeroesAdapter(Character.chara)
+
+        val filteredCharacters = Character.chara.filter { it.PublisherId == 2 }
+
+        herosRecyclerView.adapter = HeroesAdapter(filteredCharacters)
         //herosRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         herosRecyclerView.layoutManager = GridLayoutManager(this, 2)  // 2 columnas
 

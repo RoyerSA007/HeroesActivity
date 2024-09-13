@@ -47,6 +47,7 @@ class MainActivity : AppCompatActivity() {
             Log.i("EMAIL", email)
             Log.i("PASSWORD", password)
             if (email.isEmpty() || password.isEmpty()){
+                errorCredentials.visibility = View.VISIBLE
                 Log.i("ERROR","Correo electronico o Contraseña vacio")
                 return@setOnClickListener
             }
