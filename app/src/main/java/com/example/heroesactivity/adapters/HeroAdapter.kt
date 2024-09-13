@@ -6,15 +6,17 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.squareup.picasso.Picasso
 import com.example.heroesactivity.R
 import com.example.heroesactivity.models.Character
 
-class HeroesAdapter(private val heroesList: List<Character>) : RecyclerView.Adapter<HeroesAdapter.HeroViewHolder>() {
+class HeroesAdapter(private val heroesList: List<Character>) :
+    RecyclerView.Adapter<HeroesAdapter.HeroViewHolder>() {
 
     // ViewHolder: mantiene las vistas para cada elemento
     class HeroViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val heroName: TextView = itemView.findViewById(R.id.heros_name)
+        val heroName: TextView = itemView.findViewById(R.id.heroName)
+        val heroImage: ImageView = itemView.findViewById(R.id.heroImage)
     }
 
     // Infla el layout para cada ítem
@@ -25,7 +27,12 @@ class HeroesAdapter(private val heroesList: List<Character>) : RecyclerView.Adap
 
     // Vincula los datos con las vistas
     override fun onBindViewHolder(holder: HeroViewHolder, position: Int) {
-        holder.heroName.text = heroesList[position].name
+        val hero = heroesList[position]
+        holder.heroName.text = hero.name
+
+        Picasso.get()
+            .load(hero.img)
+            .into(holder.heroImage)
     }
 
     // Devuelve la cantidad de elementos en la lista
